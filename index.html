@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐！</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="ribbons"></div>
+    <canvas id="confetti"></canvas>
+    <audio id="celebrationSound" preload="auto" autoplay loop>
+        <source src="muise/1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <!-- 引导页 -->
+        <div class="guide-page active" id="guide">
+            <h1 class="welcome-text">亲爱的姐姐，请点击开启你的生日惊喜</h1>
+            <div class="tap-hint">轻触屏幕继续</div>
+        </div>
+
+        <!-- 主页面 -->
+        <div class="birthday-page" id="birthday">
+            <div class="cake">
+                <div class="candle"></div>
+            </div>
+            <div class="wish-text">
+                <h1>亲爱的姐姐，生日快乐！</h1>
+                <p class="message">今天是姐姐的生日，弟弟特别为你准备了惊喜哦</p>
+            </div>
+            <div class="gift-box">
+                <div class="gift-box-top"></div>
+                <div class="gift-box-bottom"></div>
+                <div class="gift-ribbon"></div>
+                <div class="gift-bow"></div>
+                <div class="gift-hint">点击打开礼物</div>
+            </div>
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+        </div>
+
+        <!-- 祝福卡片 -->
+        <div class="card-page" id="card" >
+            <div class="card" >
+                <div class="card-front">
+                    <h2>给最亲爱的姐姐</h2>
+                    <p>点击打开弟弟的祝福</p>
+                </div>
+                <div class="card-inside">
+                    <div class="slideshow">
+                        <div class="slides">
+                            <img class="slide" src="img/my.jpg" alt="生日照片">
+                            <img class="slide" src="img/my.jpg" alt="生日照片">
+                            <img class="slide" src="img/my.jpg" alt="生日照片">
+                        </div>
+                    </div>
+                    <div class="card-text">
+                        <p>亲爱的姐姐：</p>
+                        <p>生日快乐！🎂</p>
+                        <p>谢谢你一直以来对我的照顾</p>
+                        <p>愿你永远美丽开心，前程似锦</p>
+                        <p>弟弟永远爱你！❤️</p>
+                        <div class="surprise-gift">
+                            <div class="gift-box-mini">
+                                <div class="gift-box-top-mini"></div>
+                                <div class="gift-box-bottom-mini"></div>
+                                <div class="gift-ribbon-mini"></div>
+                                <div class="gift-bow-mini"></div>
+                            </div>
+                            <p class="gift-hint-mini">点击打开特别惊喜</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 添加弹出层 -->
+        <div class="popup-overlay" id="giftPopup">
+            <div class="popup-content">
+                <img src="img/surprise.jpg" alt="惊喜照片">
+                <span class="close-popup">&times;</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
